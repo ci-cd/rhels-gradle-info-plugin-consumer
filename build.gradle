@@ -1,0 +1,20 @@
+buildscript {
+	repositories {
+		mavenLocal()
+	}
+	
+	dependencies {
+		classpath 'com.github.cicd:rhels-gradle-info-plugin:1.0'
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'com.github.cicd.rhels-gradle-info'
+
+repositories {
+	mavenCentral()
+}
+
+group='com.github.cicd.example'
+version='1.0-SNAPSHOT'
